@@ -23,12 +23,12 @@ ui_fonts = get_ui_fonts(window)
 
 ## UI elements
 # Title / Info
-title_label = Button(window, text="CSV file splitter", relief="flat", background="white", font=ui_fonts.get('title_font'), command=lambda: show_info(github_wiki_url))
+get_title_label(window, ui_fonts)
 # Number of chunks
 get_number_of_chunks_label(window, ui_fonts)
 number_of_output_chunks_entry = get_number_of_chunks_entry(window, ui_fonts, '2')
 # Quit
-quit_button = Button(window, text='QUIT', command=lambda: close_program(window), background="white", font=ui_fonts.get('button_font'))
+get_quit_button(window, ui_fonts)
 # Output folder
 get_output_folder_button(window, ui_fonts)
 get_output_folder_label(window, output_folder, ui_fonts)
@@ -36,12 +36,8 @@ get_output_folder_label(window, output_folder, ui_fonts)
 get_csv_file_selection_button(window, ui_fonts)
 get_csv_file_selection_label(window, input_file, ui_fonts)
 # CSV split
-csv_file_splitter_button = Button(window, text='Split CSV file...', command=lambda: split_csv_file_into_chunks(get_number_of_output_chunks_from_entry(number_of_output_chunks_entry)), background = "white", font=ui_fonts.get('button_font'))
+get_csv_file_splitter_button(window, ui_fonts, number_of_output_chunks_entry)
 
-## UI elements grid
-title_label.grid(row=0, column=0, columnspan = 2, padx = 20, pady = 20)
-csv_file_splitter_button.grid(row=4, column=0, padx = 2, pady = 2)
-quit_button.grid(row=5, column=0, columnspan = 2, padx = 2, pady = 2)
 
 ## Hold until quit
 mainloop()
