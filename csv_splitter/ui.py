@@ -1,8 +1,8 @@
 ## Import libraries and functions
-from libraries import *
-from constants import *
-from functions import *
-from functions_ui import *
+from csv_splitter.libraries import *
+from csv_splitter.constants import *
+from csv_splitter.functions import *
+from csv_splitter.functions_ui import *
 
 ## WINDOW
 ### Main window

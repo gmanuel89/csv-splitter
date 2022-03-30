@@ -1,6 +1,6 @@
-
-from libraries import *
-from functions import *
+## Import libraries and functions
+from csv_splitter.libraries import *
+from csv_splitter.functions import *
 
 def get_output_folder_label(window, output_folder, font):
     global output_folder_label

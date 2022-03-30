@@ -1,5 +1,5 @@
 ## Import libraries
-from libraries import *
+from csv_splitter.libraries import *
 
 # Initialise output folder
 output_folder = os.getcwd()
