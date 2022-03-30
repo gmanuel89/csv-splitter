@@ -23,20 +23,20 @@ ui_fonts = get_ui_fonts(window)
 
 ## UI elements
 # Title / Info
-get_title_label(window, ui_fonts)
+get_title_label(window, title_label, github_wiki_url, ui_fonts)
 # Number of chunks
-get_number_of_chunks_label(window, ui_fonts)
-number_of_output_chunks_entry = get_number_of_chunks_entry(window, ui_fonts, '2')
+get_number_of_chunks_label(window, number_of_chunks_label, ui_fonts)
+number_of_output_chunks_entry = get_number_of_chunks_entry(window, ui_fonts, number_of_chunks_entry_default_value)
 # Quit
-get_quit_button(window, ui_fonts)
+get_quit_button(window, quit_button_label, ui_fonts)
 # Output folder
-get_output_folder_button(window, ui_fonts)
+get_output_folder_button(window, output_folder_button_label, ui_fonts)
 get_output_folder_label(window, output_folder, ui_fonts)
 # Input file selection
-get_csv_file_selection_button(window, ui_fonts)
+get_csv_file_selection_button(window, csv_file_selection_button_label, ui_fonts)
 get_csv_file_selection_label(window, input_file, ui_fonts)
 # CSV split
-get_csv_file_splitter_button(window, ui_fonts, number_of_output_chunks_entry)
+get_csv_file_splitter_button(window, csv_file_splitter_button_label, number_of_output_chunks_entry, ui_fonts)
 
 
 ## Hold until quit

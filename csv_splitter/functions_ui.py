@@ -4,8 +4,8 @@ from csv_splitter.functions import *
 
 
 # Title label
-def get_title_label(window, ui_fonts):
-    title_label = Button(window, text="CSV file splitter", relief="flat", background="white", font=ui_fonts.get('title_font'), command=lambda: show_info(github_wiki_url))
+def get_title_label(window, title_label, link_for_redirect, ui_fonts):
+    title_label = Button(window, text=title_label, relief="flat", background="white", font=ui_fonts.get('title_font'), command=lambda: show_info(link_for_redirect))
     title_label.grid(row=0, column=0, columnspan = 2, padx = 20, pady = 20)
 
 
@@ -25,17 +25,17 @@ def select_output_folder_button_function(window, output_folder, ui_fonts):
     output_folder = select_output_folder()
     refresh_output_folder_label(window, output_folder, ui_fonts)
 
-def get_output_folder_button(window, ui_fonts):
+def get_output_folder_button(window, text_to_display, ui_fonts):
     global select_output_folder_button
-    select_output_folder_button = Button(window, text='Select output folder...', command=lambda: select_output_folder_button_function(window, output_folder, ui_fonts), background = "white", font=ui_fonts.get('button_font'))
+    select_output_folder_button = Button(window, text=text_to_display, command=lambda: select_output_folder_button_function(window, output_folder, ui_fonts), background = "white", font=ui_fonts.get('button_font'))
     select_output_folder_button.grid(row=3, column=0, padx = 2, pady = 2)
     return select_output_folder_button
 
 
 # Number of chunks label
-def get_number_of_chunks_label(window, ui_fonts):
+def get_number_of_chunks_label(window, text_to_display, ui_fonts):
     global number_of_output_chunks_label
-    number_of_output_chunks_label = Label(window, text="Insert number of chunks", background="white", width=30, font=ui_fonts.get('label_font'))
+    number_of_output_chunks_label = Label(window, text=text_to_display, background="white", width=30, font=ui_fonts.get('label_font'))
     number_of_output_chunks_label.grid(row=1, column=0, padx = 2, pady = 2)
     return number_of_output_chunks_label
 
@@ -65,15 +65,15 @@ def csv_file_selection_button_function(window, input_file, ui_fonts):
     input_file = select_input_csv_file()
     refresh_csv_file_selection_label(window, input_file, ui_fonts)
 
-def get_csv_file_selection_button(window, ui_fonts):
-    csv_file_selection_button = Button(window, text='Select input CSV file...', command=lambda: csv_file_selection_button_function(window, input_file, ui_fonts), background = "white", font=ui_fonts.get('button_font'))
+def get_csv_file_selection_button(window, text_to_display, ui_fonts):
+    csv_file_selection_button = Button(window, text=text_to_display, command=lambda: csv_file_selection_button_function(window, input_file, ui_fonts), background = "white", font=ui_fonts.get('button_font'))
     csv_file_selection_button.grid(row=2, column=0, padx = 2, pady = 2)
     return csv_file_selection_button
 
 
 # Quit button
-def get_quit_button(window, ui_fonts):
-    quit_button = Button(window, text='QUIT', command=lambda: close_program(window), background="white", font=ui_fonts.get('button_font'))
+def get_quit_button(window, text_to_display, ui_fonts):
+    quit_button = Button(window, text=text_to_display, command=lambda: close_program(window), background="white", font=ui_fonts.get('button_font'))
     quit_button.grid(row=5, column=0, columnspan = 2, padx = 2, pady = 2)
 
 
@@ -82,8 +82,8 @@ def csv_file_splitter_button_function(number_of_output_chunks_entry):
     number_of_output_chunks = get_number_of_output_chunks_from_entry(number_of_output_chunks_entry)
     split_csv_file_into_chunks(number_of_output_chunks)
 
-def get_csv_file_splitter_button(window, ui_fonts, number_of_output_chunks_entry):
-    csv_file_splitter_button = Button(window, text='Split CSV file...', command=lambda: csv_file_splitter_button_function(number_of_output_chunks_entry), background = "white", font=ui_fonts.get('button_font'))
+def get_csv_file_splitter_button(window, text_to_display, number_of_output_chunks_entry, ui_fonts):
+    csv_file_splitter_button = Button(window, text=text_to_display, command=lambda: csv_file_splitter_button_function(number_of_output_chunks_entry), background = "white", font=ui_fonts.get('button_font'))
     csv_file_splitter_button.grid(row=4, column=0, padx = 2, pady = 2)
 
 
