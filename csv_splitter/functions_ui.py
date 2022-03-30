@@ -12,7 +12,7 @@ def get_title_label(window, title_label, link_for_redirect, ui_fonts):
 # Output folder label
 def get_output_folder_label(window, output_folder, ui_fonts):
     global output_folder_label
-    output_folder_label = Label(window, text=output_folder, background="white", width=30, font=ui_fonts.get('label_font'))
+    output_folder_label = Label(window, text=output_folder, background="white", width=100, font=ui_fonts.get('label_font'))
     output_folder_label.grid(row=3, column=1, padx = 2, pady = 2)
     return output_folder_label
 
@@ -52,7 +52,7 @@ def get_number_of_chunks_entry(window, ui_fonts, default_value):
 # CSV selection label
 def get_csv_file_selection_label(window, input_file, ui_fonts):
     global csv_file_selection_label
-    csv_file_selection_label = Label(window, text=input_file, background="white", width=30, font=ui_fonts.get('label_font'))
+    csv_file_selection_label = Label(window, text=input_file, background="white", width=100, font=ui_fonts.get('label_font'))
     csv_file_selection_label.grid(row=2, column=1, padx = 2, pady = 2)
     return csv_file_selection_label
 
