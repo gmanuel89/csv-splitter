@@ -17,10 +17,3 @@ def select_output_folder():
     messagebox.showinfo(title='Folder selected', message="The file(s) will be saved in '%s'" %(output_folder))
     master.destroy()
     return output_folder
-
-
-# Initialise variables
-#output_folder = ''
-
-# Select output folder
-#select_output_folder()

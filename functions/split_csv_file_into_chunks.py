@@ -4,6 +4,10 @@ from tkinter import Tk, messagebox
 
 ## Function to open the original CSV file and split it
 def split_csv_file_into_chunks(input_file: str, input_file_name: str, number_of_output_chunks: int, output_folder: str):
+    print('NUMBER OF CHUNKS: ' + str(number_of_output_chunks))
+    print('INPUT FILE: ' + input_file)
+    print('INPUT FILE NAME: ' + input_file_name)
+    print('OUTPUT FOLDER: ' + output_folder)
     # Open the CSV file and split it into chunks
     with open (input_file, 'r', encoding='UTF8') as input_csv_file:
         input_csv_file_lines = list(csv.reader(input_csv_file))
